@@ -1,9 +1,9 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, avoid_unnecessary_containers, unused_local_variable, dead_code, unused_element, prefer_const_literals_to_create_immutables, unused_import
 
 import 'package:flutter/material.dart';
-import 'package:project/screens/HomeScreen.dart';
-import 'package:project/screens/DrawerScreen.dart';
-import 'package:project/screens/LogScreen.dart';
+import 'package:project/screens/homeScreen.dart';
+import 'package:project/screens/screenmenu.dart';
+import 'package:project/screens/logScreen.dart';
 import 'package:project/screens/carsdetails.dart';
 
 class screen1 extends StatelessWidget {
@@ -37,37 +37,36 @@ class screen1 extends StatelessWidget {
 
     if (devicetype == 'mobile'){
       return Row(children: [
-        Expanded(child:HomeScreen()),
+        Expanded(child:homeScreen()),
         ]
       );
     }
     else if (devicetype == 'tablet'){
        return Row(children: [
-        Expanded(child: DrawerScreen()),
-        Expanded(child: HomeScreen()),
+        Expanded(flex: 20,child: MenuScreen()),
+        Expanded(flex: 20,child: homeScreen()),
         ]
       );
     }
     else if (devicetype == 'desktop'){
       return Row(children: [
-        Expanded(child: DrawerScreen()),
-        Expanded(child: HomeScreen()),
+        Expanded(flex: 20,child: MenuScreen()),
+        Expanded(flex: 20,child: homeScreen()),
         ]
       );
     }
-    else{
+    else {
        return Row(children: [
-        Expanded(child: DrawerScreen()),
-        Expanded(child: HomeScreen()),
+        Expanded(flex: 20,child: MenuScreen()),
+        Expanded(flex: 20,child: homeScreen()),
         ]
       );
     }
-  }
-    
+  }    
     return Scaffold(
-      body: Column(children: [
-        HomeScreen(),
-        DrawerScreen(),
+      body: Row(children: [
+        //HomeScreen(),
+        //DrawerScreen(),
         Expanded(child: 
         buildMainArea()
           )
