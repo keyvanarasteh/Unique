@@ -4,8 +4,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:project/screens/screenmenu.dart';
 
-
-
 class detailsscreen extends StatelessWidget {
   static var screenHeight;
   static var screenWidht;
@@ -21,12 +19,12 @@ class detailsscreen extends StatelessWidget {
         left: true,
         right: true,
         top: true,
-        
         child: (Padding(
           padding: const EdgeInsets.all(0),
           child: Column(
             children: [
-              Expanded(flex: 10,
+              Expanded(
+                flex: 10,
                 child: Stack(
                   children: [
                     Container(
@@ -53,8 +51,7 @@ class detailsscreen extends StatelessWidget {
                           ],
                         )),
                     Padding(
-                      padding:
-                          const EdgeInsets.all(2),
+                      padding: const EdgeInsets.all(2),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -66,8 +63,13 @@ class detailsscreen extends StatelessWidget {
                             child: IconButton(
                               icon: Icon(Icons.arrow_back_ios_new,
                                   size: 20, color: Color(0xffaeaeae)),
-                              onPressed: ()  {Navigator.push(
-                                  context,MaterialPageRoute(builder: (context) => const MenuScreen()),);},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const MenuScreen()),
+                                );
+                              },
                             ),
                           ),
                           Container(
@@ -87,84 +89,97 @@ class detailsscreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Expanded( flex :2,
+              Expanded(
+                flex: 2,
                 child: Container(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,  
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(" New Cars"),
-                        Row(
-                          children: [
-                            CircleAvatar(
-                              radius:15,
-                              backgroundImage: AssetImage('images/avatar.png'),                                            
-                            ),
-                            Text(" 4.5 "),                                 
-                        Icon(Icons.star,color: Colors.amber,),
-                          ],
-                        ),      
+                      Text(
+                        " New Cars",
+                        style: TextStyle(fontFamily: 'Lato'),
+                      ),
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 15,
+                            backgroundImage: AssetImage('images/avatar.png'),
+                          ),
+                          Text(" 4.5 "),
+                          Icon(
+                            Icons.star,
+                            color: Colors.amber,
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
               ),
-              Expanded(flex: 4,child:
-               Container(
+              Expanded(
+                flex: 4,
+                child: Container(
                   child: Row(
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(6),
                         child: Container(
-                          decoration: BoxDecoration(color: Colors.blue[900],borderRadius: BorderRadius.circular(5),),
-                          child: Text("Overall",style: TextStyle(color: Colors.white)),
+                          decoration: BoxDecoration(
+                            color: Colors.blue[900],
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: Text("Overall",
+                              style: TextStyle(color: Colors.white)),
                         ),
                       ),
-                       Padding(
-                         padding: const EdgeInsets.all(6),
-                         child: Container(
+                      Padding(
+                        padding: const EdgeInsets.all(6),
+                        child: Container(
                           child: Text(" Car "),
+                        ),
                       ),
-                       ),
-                       Padding(
-                         padding: const EdgeInsets.all(6),
-                         child: Container(
+                      Padding(
+                        padding: const EdgeInsets.all(6),
+                        child: Container(
                           child: Text(" Location "),
+                        ),
                       ),
-                       ),
-                       Padding(
-                         padding: const EdgeInsets.all(6),
-                         child: Container(
+                      Padding(
+                        padding: const EdgeInsets.all(6),
+                        child: Container(
                           child: Text(" Reiews "),
+                        ),
                       ),
-                       ),
                     ],
                   ),
                 ),
-               ),
-               Expanded(flex: 5,child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [ Padding(
-                          padding: const EdgeInsets.only(bottom:10),
-                          child: ProductItem(
-                            productName: '3.6s',               
-                            productPrice: '0-100km/h',
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom:10),
-                          child: ProductItem(
-                            productName: '450km',
-                            productPrice: 'Range',
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom:10),
-                          child: ProductItem(
-                            productName: '535',
-                            productPrice: '\Trunk',
-                          ),
-                        ),])
               ),
-              Expanded(flex: 8,child: Image.asset("images/Maps.jpg"))
+              Expanded(
+                  flex: 5,
+                  child: ListView(scrollDirection: Axis.horizontal, children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 10),
+                      child: ProductItem(
+                        productName: '3.6s',
+                        productPrice: '0-100km/h',
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 10),
+                      child: ProductItem(
+                        productName: '450km',
+                        productPrice: 'Range',
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 10),
+                      child: ProductItem(
+                        productName: '535',
+                        productPrice: '\Trunk',
+                      ),
+                    ),
+                  ])),
+              Expanded(flex: 8, child: Image.asset("images/Maps.jpg"))
             ],
           ),
         )),
@@ -172,6 +187,7 @@ class detailsscreen extends StatelessWidget {
     );
   }
 }
+
 class ProductItem extends StatelessWidget {
   final String productName;
   final String productPrice;
@@ -181,7 +197,6 @@ class ProductItem extends StatelessWidget {
     this.productName = '',
     this.productPrice = '',
   }) : super(key: key);
-  
 
   @override
   Widget build(BuildContext context) {
@@ -217,7 +232,7 @@ class ProductItem extends StatelessWidget {
             ),
             // Product Price
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal:2),
+              padding: const EdgeInsets.symmetric(horizontal: 2),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
