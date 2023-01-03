@@ -43,37 +43,25 @@ class homeScreen extends StatelessWidget {
         ),
       ),          
          Expanded(flex: 5,                
-                  child: Column(
-                    children: [                     
-                      Padding(
-                        padding: const EdgeInsets.only(top: 20),
-                        child: Row(
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [             
-                            Text("  Let's find a  ",style:TextStyle(
-                                color:Colors.black87,
-                                decoration: TextDecoration.none,
-                                fontStyle: FontStyle.normal,
-                                fontFamily: "Lato",
-                                fontSize: 35,
-                              ),
-                            ),
-                            Text("sport ",style:TextStyle(
-                                color:Colors.black87,
-                                decoration: TextDecoration.underline,
-                                decorationColor: Colors.amber,
-                                fontStyle: FontStyle.normal,
-                                fontFamily: "Lato",
-                                fontSize: 35
-                              ),
-                            ),             
-                          ],           
-                        ),
-                      ),                      
-                          Row(
-                           // ignore: prefer_const_literals_to_create_immutables
-                           children: [
-                             Text("  car",style:TextStyle(
+                  child: ListView(
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      Column(
+                        children: [                     
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20),
+                            child: Row(
+                              // ignore: prefer_const_literals_to_create_immutables
+                              children: [             
+                                Text("  Let's find a  ",style:TextStyle(
+                                    color:Colors.black87,
+                                    decoration: TextDecoration.none,
+                                    fontStyle: FontStyle.normal,
+                                    fontFamily: "Lato",
+                                    fontSize: 35,
+                                  ),
+                                ),
+                                Text("sport ",style:TextStyle(
                                     color:Colors.black87,
                                     decoration: TextDecoration.underline,
                                     decorationColor: Colors.amber,
@@ -81,17 +69,34 @@ class homeScreen extends StatelessWidget {
                                     fontFamily: "Lato",
                                     fontSize: 35
                                   ),
-                                ),
-                                Text("  for you",style:TextStyle(
-                                    color:Colors.black87,
-                                    decoration: TextDecoration.none,
-                                    fontStyle: FontStyle.normal,
-                                    fontFamily: "Lato",
-                                    fontSize: 35
-                                  ),
-                                ),
-                           ],
-                         ),                      
+                                ),             
+                              ],           
+                            ),
+                          ),                      
+                              Row(
+                               // ignore: prefer_const_literals_to_create_immutables
+                               children: [
+                                 Text("  car",style:TextStyle(
+                                        color:Colors.black87,
+                                        decoration: TextDecoration.underline,
+                                        decorationColor: Colors.amber,
+                                        fontStyle: FontStyle.normal,
+                                        fontFamily: "Lato",
+                                        fontSize: 35
+                                      ),
+                                    ),
+                                    Text("  for you",style:TextStyle(
+                                        color:Colors.black87,
+                                        decoration: TextDecoration.none,
+                                        fontStyle: FontStyle.normal,
+                                        fontFamily: "Lato",
+                                        fontSize: 35
+                                      ),
+                                    ),
+                               ],
+                             ),                      
+                        ],
+                      ),
                     ],
                   ),
                 ),  
