@@ -105,7 +105,8 @@ class homeScreen extends StatelessWidget {
                    child: ListView(
                     scrollDirection: Axis.horizontal,
                      children: [
-                       Row(
+                       Wrap(
+                        direction: Axis.vertical,
                          children: [
                            Container(
                                         height: 50,
@@ -119,10 +120,34 @@ class homeScreen extends StatelessWidget {
                                           borderRadius: BorderRadius.all(Radius.circular(15))
                                         ),
                                       ),
+                                      Container(
+                                        height: 50,
+                                        width: 100,       
+                                        child: Center(child: Text("Cupra")),
+                                        margin: const EdgeInsets.all(10),//Dışarıya müdahale eder (Kenarlara Boşluk)
+                                        decoration: BoxDecoration(
+                                          color: Colors.grey[300],//rengini değiştirir
+                                          // ignore: prefer_const_literals_to_create_immutables                      
+                                          shape: BoxShape.rectangle,//şekili daire yapar
+                                          borderRadius: BorderRadius.all(Radius.circular(15))
+                                        ),
+                                      ),
                              Container(
                                         height: 50,
                                         width: 100,       
                                         child: Center(child: Text("Porsche")),
+                                        margin: const EdgeInsets.all(10),//Dışarıya müdahale eder (Kenarlara Boşluk)
+                                        decoration: BoxDecoration(
+                                          color: Colors.grey[300],//rengini değiştirir
+                                          // ignore: prefer_const_literals_to_create_immutables                      
+                                          shape: BoxShape.rectangle,//şekili daire yapar
+                                          borderRadius: BorderRadius.all(Radius.circular(15))
+                                        ),
+                                      ),
+                                      Container(
+                                        height: 50,
+                                        width: 100,       
+                                        child: Center(child: Text("Hyundai")),
                                         margin: const EdgeInsets.all(10),//Dışarıya müdahale eder (Kenarlara Boşluk)
                                         decoration: BoxDecoration(
                                           color: Colors.grey[300],//rengini değiştirir
@@ -155,10 +180,34 @@ class homeScreen extends StatelessWidget {
                                           borderRadius: BorderRadius.all(Radius.circular(15))
                                         ),
                                       ),
+                                      Container(
+                                        height: 50,
+                                        width: 100,       
+                                        child: Center(child: Text("Honda")),
+                                        margin: const EdgeInsets.all(10),//Dışarıya müdahale eder (Kenarlara Boşluk)
+                                        decoration: BoxDecoration(
+                                          color: Colors.grey[300],//rengini değiştirir
+                                          // ignore: prefer_const_literals_to_create_immutables                      
+                                          shape: BoxShape.rectangle,//şekili daire yapar
+                                          borderRadius: BorderRadius.all(Radius.circular(15))
+                                        ),
+                                      ),
                                 Container(
                                         height: 50,
                                         width: 100,       
                                         child: Center(child: Text("Seat")),
+                                        margin: const EdgeInsets.all(10),//Dışarıya müdahale eder (Kenarlara Boşluk)
+                                        decoration: BoxDecoration(
+                                          color: Colors.grey[300],//rengini değiştirir
+                                          // ignore: prefer_const_literals_to_create_immutables                      
+                                          shape: BoxShape.rectangle,//şekili daire yapar
+                                          borderRadius: BorderRadius.all(Radius.circular(15))
+                                        ),
+                                      ),
+                                      Container(
+                                        height: 50,
+                                        width: 100,       
+                                        child: Center(child: Text("Skoda")),
                                         margin: const EdgeInsets.all(10),//Dışarıya müdahale eder (Kenarlara Boşluk)
                                         decoration: BoxDecoration(
                                           color: Colors.grey[300],//rengini değiştirir
@@ -181,7 +230,7 @@ class homeScreen extends StatelessWidget {
                 ],
               ),
              ),    
-             Expanded(flex: 12,child: ListView(
+             Expanded(flex: 16,child: ListView(
               scrollDirection: Axis.vertical,
               children: [ Padding(
                           padding: const EdgeInsets.only(bottom:50),
